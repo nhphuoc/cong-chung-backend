@@ -1,19 +1,17 @@
 package vn.com.panda.learncardriving.service.authentication;
 
-import java.time.LocalDateTime;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
 import vn.com.panda.learncardriving.configuration.ApplicationConfigProperties;
 import vn.com.panda.learncardriving.controller.exception.UnauthorizedException;
-import vn.com.panda.learncardriving.dto.LoginRequestDTO;
-import vn.com.panda.learncardriving.dto.LoginResponseDTO;
-import vn.com.panda.learncardriving.dto.AuthUserDTO;
+import vn.com.panda.learncardriving.dto.auth.AuthUserDTO;
+import vn.com.panda.learncardriving.dto.auth.LoginRequestDTO;
+import vn.com.panda.learncardriving.dto.auth.LoginResponseDTO;
+
+import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
@@ -37,6 +35,7 @@ public class AuthService {
                 .fullName(user.getFullName())
                 .expired(expirationDate)
                 .token(token)
+                .department(user.getDepartment())
                 .build();
     }
 

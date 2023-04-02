@@ -1,4 +1,4 @@
-package vn.com.panda.learncardriving.dto;
+package vn.com.panda.learncardriving.dto.auth;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package vn.com.panda.learncardriving.dto;
+package vn.com.panda.learncardriving.dto.auth;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import vn.com.panda.learncardriving.configuration.ObjectMapperConfig;
+import vn.com.panda.learncardriving.dto.department.DepartmentDTO;
 
 @Getter
 @Setter
@@ -24,4 +25,5 @@ public class LoginResponseDTO {
     private String token;
     @JsonFormat(pattern = ObjectMapperConfig.DATETIME_FORMAT)
     private LocalDateTime expired;
+    private DepartmentDTO department;
 }

@@ -6,6 +6,10 @@ spring:
         format_sql: false
     hibernate:
       ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cong-chung
+    username: postgres
+    password: 12345
   sql:
     init:
       mode: always

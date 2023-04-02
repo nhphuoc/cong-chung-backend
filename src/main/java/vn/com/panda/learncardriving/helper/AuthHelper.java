@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import vn.com.panda.learncardriving.dto.AuthUserDTO;
+import vn.com.panda.learncardriving.dto.auth.AuthUserDTO;
 import vn.com.panda.learncardriving.enums.UserRole;
 
 public class AuthHelper {
